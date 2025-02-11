@@ -1,0 +1,26 @@
+* {
+    font-family: 'Jua', sans-serif;
+}
+
+.hero {
+    background-color: #1A2A43;
+    color: white;
+}
+
+.bottom {
+    width: 1000px;
+    margin: auto;
+}
+
+svg.bi-trash {
+    width:240px;
+    height:24px;
+    fill:red;
+
+    
+
+}
+
+.white-space {
+    white-space: nowrap;
+  }

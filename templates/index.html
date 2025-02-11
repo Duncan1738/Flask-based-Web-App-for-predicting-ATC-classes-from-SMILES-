@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATC Code Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+        }
+        table {
+            margin-top: 20px;
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>ATC Code and Target Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="smiles">Enter SMILES:</label>
+        <input type="text" id="smiles" name="smiles" required>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

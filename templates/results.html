@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Prediction Results for: {{ smiles }}</h1>
+    <img src="data:image/png;base64,{{ smiles_img }}" alt="Molecular structure">
+    <canvas id="predictionChart" width="400" height="400"></canvas>
+    <script>
+        var ctx = document.getElementById('predictionChart').getContext('2d');
+        var predictionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {{ results|map(attribute='class')|list|tojson }},
+                datasets: [{
+                    label: 'Probability (%)',
+                    data: {{ results|map(attribute='probability')|list|tojson }},
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1,
+                    barThickness: 30,  // Fixed size or use 'categoryPercentage' and 'barPercentage' for a more dynamic approach
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        categoryPercentage: 0.5,  // Reduce the outer padding of bars
+                        barPercentage: 0.5       // Reduce the bar width relative to category width
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

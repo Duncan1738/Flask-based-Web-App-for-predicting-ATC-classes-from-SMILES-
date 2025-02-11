@@ -7,6 +7,7 @@ Pre-trained GCN Models for predicting ATC classes (A, B, C, etc.).
 Molecular Visualization using RDKit—converts the SMILES string into a molecule image.
 Clear Error Handling and Logging for invalid SMILES or failed predictions.
 Environment-based Configuration for flexible deployment with Flask-CORS support.
+
 🚀 Technologies Used
 Flask: Web framework for handling requests and rendering templates.
 DeepChem: For molecular graph convolution feature extraction and model prediction.

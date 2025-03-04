@@ -79,32 +79,27 @@ Provides clear error messages for:
 ✅ Logs detailed error messages for easier debugging.
 📌 Getting Started
 1️⃣ Clone the Repository
-bash
-Copy
-Edit
+
+
 git clone https://github.com/yourusername/Flask-ATC-SMILES-Prediction.git
 cd Flask-ATC-SMILES-Prediction
 2️⃣ Install Dependencies
-bash
-Copy
-Edit
+
+
 pip install -r requirements.txt
 3️⃣ Run the Flask App
-bash
-Copy
-Edit
+
+
 python app.py
 4️⃣ Access the Web App
 Open a browser and go to:
 
-cpp
-Copy
-Edit
+
+
 http://127.0.0.1:5000/
 📜 Project Structure
-graphql
-Copy
-Edit
+
+
 📂 Flask-ATC-SMILES-Prediction
 │── 📂 static/               # CSS, JavaScript, images
 │── 📂 templates/            # HTML templates for rendering UI

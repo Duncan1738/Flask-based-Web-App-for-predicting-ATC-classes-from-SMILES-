@@ -51,6 +51,7 @@ The app **processes molecular structures**, **extracts features**, and **display
 4️⃣ **Returns class probabilities**, **sorted in descending order**.  
 
 ---
+
 ## 📊 Example Input/Output
 
 **🔹 Input:**  
@@ -58,7 +59,6 @@ The app **processes molecular structures**, **extracts features**, and **display
 {
     "smiles": "CCO"
 }
-
 🔹 Output (Predicted Class Probabilities):
 A: 85.5%
 B: 12.4%
@@ -73,19 +73,14 @@ Provides clear error messages for:
 ✅ Logs detailed error messages for easier debugging.
 📌 Getting Started
 1️⃣ Clone the Repository
-
-
 git clone https://github.com/yourusername/Flask-ATC-SMILES-Prediction.git
 cd Flask-ATC-SMILES-Prediction
 2️⃣ Install Dependencies
-
 pip install -r requirements.txt
 3️⃣ Run the Flask App
-
 python app.py
 4️⃣ Access the Web App
 Open a browser and go to:
-
 http://127.0.0.1:5000/
 📜 Project Structure
 📂 Flask-ATC-SMILES-Prediction

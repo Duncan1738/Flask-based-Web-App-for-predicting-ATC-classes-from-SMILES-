@@ -51,7 +51,6 @@ The app **processes molecular structures**, **extracts features**, and **display
 4️⃣ **Returns class probabilities**, **sorted in descending order**.  
 
 ---
-
 ## 📊 Example Input/Output
 
 **🔹 Input:**  

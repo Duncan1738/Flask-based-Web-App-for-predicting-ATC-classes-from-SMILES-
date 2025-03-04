@@ -1,60 +1,115 @@
-# Flask-based-Web-App-for-predicting-ATC-classes-from-SMILES-
-🧪 Flask-based Web App for Predicting ATC Classes from SMILES
-A Flask-based web application for predicting ATC classes from SMILES using pre-trained Graph Convolutional Network (GCN) models from DeepChem. This app accepts SMILES input, processes it using DeepChem’s MolGraphConvFeaturizer, and displays the predicted class probabilities along with a molecular structure image.
+# 🧪 Flask-Based Web App for Predicting ATC Classes from SMILES
 
-🌟 Features
-Pre-trained GCN Models for predicting ATC classes (A, B, C, etc.).
-Molecular Visualization using RDKit—converts the SMILES string into a molecule image.
-Clear Error Handling and Logging for invalid SMILES or failed predictions.
-Environment-based Configuration for flexible deployment with Flask-CORS support.
+This **Flask-based web application** predicts **Anatomical Therapeutic Chemical (ATC) classes** for input **SMILES strings** using **Graph Convolutional Networks (GCN)** from **DeepChem**.  
+The app **processes molecular structures**, **extracts features**, and **displays prediction results** along with a **molecular visualization**.
 
-🚀 Technologies Used
-Flask: Web framework for handling requests and rendering templates.
-DeepChem: For molecular graph convolution feature extraction and model prediction.
-RDKit: For SMILES parsing and molecule image generation.
-Flask-CORS: For handling cross-origin requests.
-Python: Core programming language for the backend.
+---
 
-🌐 Route Overview
-Route	Description
-/	Renders the home page (index.html).
-/predict	Accepts a POST request with a SMILES string. Featurizes the molecule and returns predictions.
-📖 Code Explanation
-Model Loading
-Loads pre-trained GCN models for each ATC class (A, B, C, etc.) from the directory last_final_atc_property_prediction_models/.
-Uses DeepChem's GCNModel to load and predict molecular properties.
-Models are stored in the atc_models dictionary for quick access.
-Molecular Visualization
-Converts the input SMILES string into an RDKit molecule object.
-Generates a PNG image of the molecule and encodes it in base64 for rendering on the web.
-Prediction Workflow
-Accepts a SMILES string from the user.
-Featurizes the molecule using DeepChem’s MolGraphConvFeaturizer.
-Runs predictions on all loaded GCN models.
-Returns class probabilities sorted in descending order.
-📊 Example Input/Output
-Input:
-SMILES string (e.g., CCO)
+## 🌟 Features
+✅ **Pre-trained GCN Models** – Predicts **ATC classes (A, B, C, etc.)**.  
+✅ **Molecular Visualization** – Uses **RDKit** to generate a **molecule image from SMILES**.  
+✅ **Clear Error Handling** – Detects **invalid SMILES and prediction failures**, logging errors.  
+✅ **Environment-Based Configuration** – Supports **Flask-CORS** for flexible deployment.  
 
-Output:
-Predicted class probabilities:
+---
+
+## 🚀 Technologies Used
+- **Flask** – Web framework for handling HTTP requests and rendering templates.
+- **DeepChem** – Feature extraction and **GCN-based molecular property prediction**.
+- **RDKit** – **SMILES parsing and molecule visualization**.
+- **Flask-CORS** – Cross-origin request handling for flexible deployment.
+- **Python** – Core backend programming language.
+
+---
+
+## 🌐 Route Overview
+
+| Route        | Description |
+|-------------|------------|
+| `/`         | Renders the **home page** (`index.html`). |
+| `/predict`  | Accepts a **POST request** with a **SMILES string**, **featurizes the molecule**, and **returns predictions**. |
+
+---
+
+## 📖 Code Explanation
+
+### **1️⃣ Model Loading**
+- Loads **pre-trained GCN models** for each **ATC class (A, B, C, etc.)** from the directory:  
+  📁 **`last_final_atc_property_prediction_models/`**
+- Uses **DeepChem’s GCNModel** to **load and predict molecular properties**.
+- Stores models in the **`atc_models` dictionary** for **quick access**.
+
+### **2️⃣ Molecular Visualization**
+- Converts the input **SMILES string** into an **RDKit molecule object**.
+- Generates a **PNG image** of the molecule.
+- Encodes the **image in base64** for rendering in the web UI.
+
+### **3️⃣ Prediction Workflow**
+1️⃣ **Accepts a SMILES string** from the user.  
+2️⃣ **Featurizes the molecule** using **DeepChem’s `MolGraphConvFeaturizer`**.  
+3️⃣ **Runs predictions** on all **loaded GCN models**.  
+4️⃣ **Returns class probabilities**, **sorted in descending order**.  
+
+---
+
+## 📊 Example Input/Output
+
+**🔹 Input:**  
+```json
+{
+    "smiles": "CCO"
+}
+
+
+🔹 Output (Predicted Class Probabilities):
+
+makefile
+Copy
+Edit
 A: 85.5%
 B: 12.4%
-Molecular Structure Image (generated from SMILES)
+C: 2.1%
+✅ Molecular Structure Image (generated from SMILES) 🧪
+
 🛠 Error Handling & Logging
 Provides clear error messages for:
-Invalid or malformed SMILES strings.
-Failed model predictions.
-Logs errors for easier debugging.
-✨ Future Improvements
-Add interactive visualizations for prediction results.
-Support multiple molecule input for batch prediction.
-Deploy the app on Heroku or Docker for easier sharing.
-📜 License
-This project is licensed under the MIT License.
 
-📧 Contact
-For questions or suggestions, feel free to reach out:
-Duncan Kibet
-GitHub Profile
+❌ Invalid or malformed SMILES strings.
+❌ Failed model predictions.
+✅ Logs detailed error messages for easier debugging.
+📌 Getting Started
+1️⃣ Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/Flask-ATC-SMILES-Prediction.git
+cd Flask-ATC-SMILES-Prediction
+2️⃣ Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3️⃣ Run the Flask App
+bash
+Copy
+Edit
+python app.py
+4️⃣ Access the Web App
+Open a browser and go to:
 
+cpp
+Copy
+Edit
+http://127.0.0.1:5000/
+📜 Project Structure
+graphql
+Copy
+Edit
+📂 Flask-ATC-SMILES-Prediction
+│── 📂 static/               # CSS, JavaScript, images
+│── 📂 templates/            # HTML templates for rendering UI
+│── 📂 models/               # Pre-trained GCN models for ATC prediction
+│── 📂 utils/                # Helper functions (featurization, image generation)
+│── app.py                   # Main Flask application
+│── requirements.txt         # Python dependencies
+│── README.md                # Documentation

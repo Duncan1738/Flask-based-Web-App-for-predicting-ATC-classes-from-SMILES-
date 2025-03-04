@@ -53,7 +53,6 @@ The app **processes molecular structures**, **extracts features**, and **display
 ---
 
 ## 📊 Example Input/Output
-
 **🔹 Input:**  
 ```json
 {

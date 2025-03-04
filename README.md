@@ -59,7 +59,6 @@ The app **processes molecular structures**, **extracts features**, and **display
     "smiles": "CCO"
 }
 
-
 🔹 Output (Predicted Class Probabilities):
 A: 85.5%
 B: 12.4%

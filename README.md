@@ -59,35 +59,3 @@ The app **processes molecular structures**, **extracts features**, and **display
 {
     "smiles": "CCO"
 }
-🔹 Output (Predicted Class Probabilities):
-A: 85.5%
-B: 12.4%
-C: 2.1%
-✅ Molecular Structure Image (generated from SMILES) 🧪
-
-🛠 Error Handling & Logging
-Provides clear error messages for:
-
-❌ Invalid or malformed SMILES strings.
-❌ Failed model predictions.
-✅ Logs detailed error messages for easier debugging.
-📌 Getting Started
-1️⃣ Clone the Repository
-git clone https://github.com/yourusername/Flask-ATC-SMILES-Prediction.git
-cd Flask-ATC-SMILES-Prediction
-2️⃣ Install Dependencies
-pip install -r requirements.txt
-3️⃣ Run the Flask App
-python app.py
-4️⃣ Access the Web App
-Open a browser and go to:
-http://127.0.0.1:5000/
-📜 Project Structure
-📂 Flask-ATC-SMILES-Prediction
-│── 📂 static/               # CSS, JavaScript, images
-│── 📂 templates/            # HTML templates for rendering UI
-│── 📂 models/               # Pre-trained GCN models for ATC prediction
-│── 📂 utils/                # Helper functions (featurization, image generation)
-│── app.py                   # Main Flask application
-│── requirements.txt         # Python dependencies
-│── README.md                # Documentation

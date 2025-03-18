@@ -59,8 +59,6 @@ The app **processes molecular structures**, **extracts features**, and **display
 {
     "smiles": "CCO"
 }
-🔹 Output classes and percentage probabilities:
-A: 85.5%
-B: 12.4%
-✅ Molecular image structure (generated from SMILES) 🧪
+🔹output
+- molecular structure generated from smiles and percentage probabilities according to each class.
 

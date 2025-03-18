@@ -61,6 +61,5 @@ The app **processes molecular structures**, **extracts features**, and **display
 }
 
 ---
-
 🔹output
-- molecular structure generated from smiles and percentage probabilities according to each class.
+      - molecular structure generated from smiles and percentage probabilities according to each class.

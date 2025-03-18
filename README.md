@@ -59,7 +59,7 @@ The app **processes molecular structures**, **extracts features**, and **display
 {
     "smiles": "CCO"
 }
-
 ---
-🔹output
+## 📊
+**🔹 output:**
       - molecular structure generated from smiles and percentage probabilities according to each class.

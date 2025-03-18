@@ -54,26 +54,22 @@ The app **processes molecular structures**, **extracts features**, and **display
 
 ## 📊 Example Input/Output
 
-### **🔹 Input**    
-```json
-{
-    "smiles": "CCO"
-}
-🔹 Output
-A molecular structure image is generated from the SMILES string.
-Predicted ATC classes with probabilities:
+### 🔹 Input  
+- **SMILES**: `CCO`
 
-{
-    "predictions": {
-        "Class A": 85.3,
-        "Class B": 10.2,
-        "Class C": 4.5
-    }
-}
+### 🔹 Output  
+- A molecular structure image is generated from the SMILES string.
+- **Predicted ATC classes with probabilities:**
+  - **Class A**: 85.3%
+  - **Class B**: 10.2%
+  - **Class C**: 4.5%
 
-📜 License
-This project is licensed under the MIT License.
+---
 
-👤 Author
-Duncan Kibet - PhD Student in Big Data & Industrial Engineering at Chosun University.
+## 📜 License
+This project is licensed under the **MIT License**.
 
+---
+
+## 👤 Author
+**Duncan Kibet** - PhD Student in **Big Data & Industrial Engineering** at **Chosun University**.

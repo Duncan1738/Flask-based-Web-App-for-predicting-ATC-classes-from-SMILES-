@@ -59,7 +59,7 @@ The app **processes molecular structures**, **extracts features**, and **display
 {
     "smiles": "CCO"
 }
-🔹 Output:
+### 🔹 Output:
 A molecular structure image is generated from the SMILES string.
 Predicted ATC classes with probabilities:
 
@@ -70,8 +70,8 @@ Predicted ATC classes with probabilities:
         "Class C": 4.5
     }
 }
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
 
-👤 Author
+## 👤 Author
 Duncan Kibet - PhD Student in Big Data & Industrial Engineering at Chosun University.

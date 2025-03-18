@@ -72,11 +72,11 @@ A molecular structure image is generated from the SMILES string.Predicted ATC cl
     }
 }
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
 
-👤 Author
+##👤 Author
 
 Duncan Kibet - PhD Student in Big Data & Industrial Engineering at Chosun University.
 

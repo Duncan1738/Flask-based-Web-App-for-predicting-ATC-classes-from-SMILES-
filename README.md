@@ -1,4 +1,3 @@
-
 # 🧪 Flask-Based Web App for Predicting ATC Classes from SMILES
 
 This **Flask-based web application** predicts **Anatomical Therapeutic Chemical (ATC) classes** for input **SMILES strings** using **Graph Convolutional Networks (GCN)** from **DeepChem**.  
@@ -25,10 +24,10 @@ The app **processes molecular structures**, **extracts features**, and **display
 
 ## 🌐 Route Overview
 
-| Route        | Description |
-|-------------|------------|
-| `/`         | Renders the **home page** (`index.html`). |
-| `/predict`  | Accepts a **POST request** with a **SMILES string**, **featurizes the molecule**, and **returns predictions**. |
+| Route       | Description |
+|------------|------------|
+| `/`        | Renders the **home page** (`index.html`). |
+| `/predict` | Accepts a **POST request** with a **SMILES string**, **featurizes the molecule**, and **returns predictions**. |
 
 ---
 
@@ -52,11 +51,27 @@ The app **processes molecular structures**, **extracts features**, and **display
 4️⃣ **Returns class probabilities**, **sorted in descending order**.  
 
 ---
+
 ## 📊 Example Input/Output
-**🔹 Input:**                                                   
+
+### **🔹 Input:**    
 ```json
 {
-    "smiles": "CCO"  Output - molecular structure generated from smiles and percentage probabilities according to each class     
+    "smiles": "CCO"
 }
+🔹 Output:
+A molecular structure image is generated from the SMILES string.
+Predicted ATC classes with probabilities:
 
+{
+    "predictions": {
+        "Class A": 85.3,
+        "Class B": 10.2,
+        "Class C": 4.5
+    }
+}
+📜 License
+This project is licensed under the MIT License.
 
+👤 Author
+Duncan Kibet - PhD Student in Big Data & Industrial Engineering at Chosun University.

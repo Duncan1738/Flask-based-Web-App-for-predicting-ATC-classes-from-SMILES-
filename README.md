@@ -54,14 +54,13 @@ The app **processes molecular structures**, **extracts features**, and **display
 ---
 
 ## 📊 Example Input/Output
-**🔹 Input:**  
+**🔹 Input:**                                                   
 ```json
 {
     "smiles": "CCO"
 }
 
-
+---
 
 🔹output
 - molecular structure generated from smiles and percentage probabilities according to each class.
-
